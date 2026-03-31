@@ -9,3 +9,9 @@
 ### Per compilar el projecte i deixar-lo a ./dist
 ´npm run build´
 
+### This project is in 
+´https://github.com/acampsme/PAC1-eines.git´
+
+### Running on netlify
+´https://pac1-eines.netlify.app/´
+
