@@ -1,0 +1,16 @@
+{
+  "name": "pac1",
+  "version": "0.26.4",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.4",
+    "parcel": "^2.16.4",
+    "sass": "^1.98.0"
+  },
+  "dependencies": {
+    "swiper": "^12.1.3"
+  }
+}
