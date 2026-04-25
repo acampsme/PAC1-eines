@@ -1,4 +1,4 @@
-# PAC1 de M4.257 - Eines HTML i CSS
+# PAC2 de M4.257 - Eines HTML i CSS
 
 ### Per instalar totes les dependecies de codi
 ´npm install´
@@ -13,5 +13,11 @@
 ´https://github.com/acampsme/PAC1-eines.git´
 
 ### Running on netlify
-´https://pac1-eines.netlify.app/´
+´https://pac2-eines.netlify.app/´
 
+
+
+git checkout
+
+v1.26.4 pac1
+v2.26.5 pac2
