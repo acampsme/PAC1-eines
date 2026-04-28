@@ -8,36 +8,80 @@
 </head>
 
 <body>
+<a href="#main" class="skip-link">Saltar al contingut</a>
 
-<header class="header">
-  <h1>Pasta Carbonara</h1>
-
-  <nav aria-label="Navegació principal">
-    <ul class="nav">
-      <li><a href="index.html">Inici</a></li>
-      <li><a href="categoria.html">Receptes</a></li>
-      <li><a href="links.html"">Enllaços</a></li>
-    </ul>
-  </nav>
+<header class="header" role="banner">
+  <div class="header-inner">
+    <div>
+      <p class="eyebrow">Detall de la recepta</p>
+      <h1>Pasta Carbonara</h1>
+    </div>
+    <button class="burger" aria-expanded="false" aria-label="Obrir menú">☰</button>
+    <nav class="nav-menu" aria-label="Navegació principal">
+      <ul class="nav">
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="categoria.html">Receptes</a></li>
+        <li><a href="links.html">Enllaços</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<main class="container">
+<main id="main" class="container">
+  <article class="recipe-detail">
+    <picture class="detail-picture">
+      <source type="image/avif"
+              srcset="images/photo-pasta-400.avif 400w, images/photo-pasta-800.avif 800w, images/photo-pasta-1200.avif 1200w"
+              sizes="(max-width: 640px) 100vw, 600px">
+      <source type="image/webp"
+              srcset="images/photo-pasta-400.webp 400w, images/photo-pasta-800.webp 800w, images/photo-pasta-1200.webp 1200w"
+              sizes="(max-width: 640px) 100vw, 600px">
+      <img src="images/photo-pasta-1200.jpg"
+           srcset="images/photo-pasta-400.jpg 400w, images/photo-pasta-800.jpg 800w, images/photo-pasta-1200.jpg 1200w"
+           sizes="(max-width: 640px) 100vw, 600px"
+           alt="Pasta Carbonara tradicional"
+           loading="lazy"
+           class="detail-image">
+    </picture>
 
-  <img src="https://placehold.co/600" alt="Pasta Carbonara tradicional">
+    <div class="recipe-copy">
+      <p>La pasta carbonara origina de la regió del Laci (Roma) i combina el gust intens del formatge amb la cremosa salsa d’ou. No porta crema; la textura s’aconsegueix escalfant els ous amb el formatge i l’aigua de cocció de la pasta.</p>
+      <p>Utilitza spaghetti o bucatini. Cuina la pasta al dente i reserva almenys 1 tassa d’aigua de cocció per emulsionar la salsa. Escalfa guanciale o pancetta fins que es torna cruixent i es desprengui el greix.</p>
+      <p>Bat els ous amb pecorino o parmesà ratllat i abundant pebre negre. Retira la pasta del foc i afegeix la barreja d’ous i formatge (no bullir), combinar ràpidament perquè la salsa quedi sedosa sense quallar.</p>
+      <p>Servir immediatament amb més formatge ratllat i pebre. Les variacions contemporànies poden incloure ceba, all o avellanes, però la recepta tradicional es manté minimalista i de gust intens.</p>
+    </div>
 
-  <p>La pasta carbonara origina de la regió del Laci (Roma) i combina el gust intens del formatge amb la cremosa salsa d’ou. No porta crema; la textura s’aconsegueix escalfant els ous amb el formatge i l’aigua de cocció de la pasta.</p>
-  <p>Utilitza spaghetti o bucatini. Cuina la pasta al dente i reserva almenys 1 tassa d’aigua de cocció per emulsionar la salsa. Escalfa guanciale o pancetta fins que es torna cruixent i es desprengui el greix.</p>
-  <p>Bat els ous amb pecorino o parmesà ratllat i abundant pebre negre. Retira la pasta del foc i afegeix la barreja d’ous i formatge (no bullir), combinar ràpidament perquè la salsa quedi sedosa sense quallar.</p>
-  <p>Servir immediatament amb més formatge ratllat i pebre. Les variacions contemporànies poden incloure ceba, all o avellanes, però la recepta tradicional es manté minimalista i de gust intens.</p>
-
-  <section class="gallery">
-    <img src="https://placehold.co/300" alt="Ingredients">
-    <img src="https://placehold.co/300" alt="Preparació">
-    <img src="https://placehold.co/300" alt="Plat final">
-  </section>
-
+    <section class="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Galeria de preparació</h2>
+      <figure>
+        <img src="images/photo-cuina-400.jpg"
+             srcset="images/photo-cuina-400.jpg 400w, images/photo-cuina-800.jpg 800w"
+             sizes="(max-width: 640px) 100vw, 300px"
+             alt="Ingredients de la carbonara"
+             loading="lazy">
+        <figcaption>Ingredients frescos</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo-pasta-400.jpg"
+             srcset="images/photo-pasta-400.jpg 400w, images/photo-pasta-800.jpg 800w"
+             sizes="(max-width: 640px) 100vw, 300px"
+             alt="Preparació de la carbonara"
+             loading="lazy">
+        <figcaption>Fase de preparació</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo-paella-400.jpg"
+             srcset="images/photo-paella-400.jpg 400w, images/photo-paella-800.jpg 800w"
+             sizes="(max-width: 640px) 100vw, 300px"
+             alt="Plat final de pasta carbonara"
+             loading="lazy">
+        <figcaption>Plat final</figcaption>
+      </figure>
+    </section>
+  </article>
 </main>
-<footer>
+
+<footer class="site-footer">
   <p>&copy; 2026 Tasteig del Mediterrani</p>
   <p>Contacte: <a href="mailto:acampsme@uoc.edu">Alexandre Camps</a></p>
 </footer>

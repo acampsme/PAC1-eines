@@ -8,46 +8,93 @@
 </head>
 
 <body>
+<a href="#main" class="skip-link">Saltar al contingut</a>
 
-<header class="header">
-  <h1>Paella Valenciana</h1>
-  <button class="burger" aria-expanded="false" aria-label="Obrir menú">☰</button>
-
-  <nav aria-label="Navegació principal">
-    <ul class="nav">
-      <li><a href="index.html">Inici</a></li>
-      <li><a href="categoria.html">Receptes</a></li>
-      <li><a href="links.html"">Enllaços</a></li>
-    </ul>
-  </nav>
+<header class="header" role="banner">
+  <div class="header-inner">
+    <div>
+      <p class="eyebrow">Detall de la recepta</p>
+      <h1>Paella Valenciana</h1>
+    </div>
+    <button class="burger" aria-expanded="false" aria-label="Obrir menú">☰</button>
+    <nav class="nav-menu" aria-label="Navegació principal">
+      <ul class="nav">
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="categoria.html">Receptes</a></li>
+        <li><a href="links.html">Enllaços</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<main class="container">
+<main id="main" class="container">
+  <article class="recipe-detail">
+    <picture class="detail-picture">
+      <source type="image/avif"
+              srcset="images/photo-paella-400.avif 400w, images/photo-paella-800.avif 800w, images/photo-paella-1200.avif 1200w"
+              sizes="(max-width: 640px) 100vw, 600px">
+      <source type="image/webp"
+              srcset="images/photo-paella-400.webp 400w, images/photo-paella-800.webp 800w, images/photo-paella-1200.webp 1200w"
+              sizes="(max-width: 640px) 100vw, 600px">
+      <img src="images/photo-paella-1200.jpg"
+           srcset="images/photo-paella-400.jpg 400w, images/photo-paella-800.jpg 800w, images/photo-paella-1200.jpg 1200w"
+           sizes="(max-width: 640px) 100vw, 600px"
+           alt="Paella tradicional"
+           loading="lazy"
+           class="detail-image">
+    </picture>
 
-  <img src="https://placehold.co/600" alt="Paella tradicional">
+    <div class="recipe-copy">
+      <p>La paella és un plat tradicional valencià amb més de 200 anys d’història. Originàriament preparada en cassoles obertes sobre foc de llenya, acompanyava jornalers i festes familiars a la costa.</p>
+      <p>La base és una bona sofregit de ceba, tomàquet i pebrot, arròs de gra curt i brou, a més de safrà o colorant. L’equilibri de sabors entre la proteïna, verdures i herbes és clau.</p>
+      <p>Paella valenciana clàssica inclou pollastre, conill, judia verda plana, garrofó i fesols. Alternativament es poden fer versions marineres amb marisc, o vegetarianes amb carxofes i espàrrecs.</p>
+      <p>La textura ideal es troba quan l’arròs està cuit però lleugerament ferm, i és important deixar reposar 5-10 minuts abans de servir per combinar perfums i evitar que quedi massa caldós.</p>
+    </div>
 
-  <p>La paella és un plat tradicional valencià amb més de 200 anys d’història. Originàriament preparada en cassoles obertes sobre foc de llenya, acompanyava jornalers i festes familiars a la costa.</p>
-  <p>La base és una bona sofregit de ceba, tomàquet i pebrot, arròs de gra curt i brou, a més de safrà o colorant. L’equilibri de sabors entre la proteïna, verdures i herbes és clau.</p>
-  <p>Paella valenciana clàssica inclou pollastre, conill, judia verda plana, garrofó i fesols. Alternativament es poden fer versions marineres amb marisc, o vegetarianes amb carxofes i espàrrecs.</p>
-  <p>La textura ideal es troba quan l’arròs està cuit però lleugerament ferm, i és important deixar reposar 5-10 minuts abans de servir per combinar perfums i evitar que quedi massa caldós.</p>
+    <section class="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Galeria de preparació</h2>
+      <figure>
+        <img src="images/photo-cuina-400.jpg"
+             srcset="images/photo-cuina-400.jpg 400w, images/photo-cuina-800.jpg 800w"
+             sizes="(max-width: 640px) 100vw, 300px"
+             alt="Ingredients frescos per a la paella"
+             loading="lazy">
+        <figcaption>Ingredients frescos</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo-paella-400.jpg"
+             srcset="images/photo-paella-400.jpg 400w, images/photo-paella-800.jpg 800w"
+             sizes="(max-width: 640px) 100vw, 300px"
+             alt="Paella en preparació"
+             loading="lazy">
+        <figcaption>Preparació en procés</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo-paella-400.jpg"
+             srcset="images/photo-paella-400.jpg 400w, images/photo-paella-800.jpg 800w"
+             sizes="(max-width: 640px) 100vw, 300px"
+             alt="Paella valenciana acabada de fer"
+             loading="lazy">
+        <figcaption>Resultat final</figcaption>
+      </figure>
+    </section>
 
-  <section class="gallery">
-    <img src="https://placehold.co/300" alt="Ingredients">
-    <img src="https://placehold.co/300" alt="Preparació">
-    <img src="https://placehold.co/300" alt="Resultat final">
-  </section>
-
-  <section>
-    <h2>Vídeo</h2>
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/1-SJGQ2HLp8"
-      title="Recepta paella"
-      allowfullscreen>
-    </iframe>
-  </section>
-
+    <section class="video-wrapper">
+      <h2>Vídeo</h2>
+      <div class="responsive-iframe">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/08W7LZDtnEI?si=_Op0Um2t_Ohs8fwV"
+                title="Recepta paella"
+                loading="lazy"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+      </div>
+    </section>
+  </article>
 </main>
-<footer>
+
+<footer class="site-footer">
   <p>&copy; 2026 Tasteig del Mediterrani</p>
   <p>Contacte: <a href="mailto:acampsme@uoc.edu">Alexandre Camps</a></p>
 </footer>

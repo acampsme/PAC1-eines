@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6347;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="oliveGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#228B22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006400;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bgGradient)"/>
+
+  <!-- Decorative elements -->
+  <!-- Olive branch animation -->
+  <path d="M50 150 Q100 100 150 150 Q100 200 50 150" fill="url(#oliveGradient)" stroke="#006400" stroke-width="2">
+    <animateTransform attributeName="transform" type="rotate" values="0 100 150;5 100 150;-5 100 150;0 100 150" dur="4s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="45" cy="145" r="3" fill="url(#oliveGradient)">
+    <animate attributeName="r" values="3;3.5;3" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="55" cy="155" r="3" fill="url(#oliveGradient)">
+    <animate attributeName="r" values="3;3.5;3" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="65" cy="135" r="3" fill="url(#oliveGradient)">
+    <animate attributeName="r" values="3;3.5;3" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Tomato -->
+  <ellipse cx="700" cy="100" rx="25" ry="20" fill="#FF6347" stroke="#8B0000" stroke-width="1"/>
+  <ellipse cx="695" cy="95" rx="2" ry="3" fill="#228B22"/>
+  <ellipse cx="705" cy="98" rx="2" ry="3" fill="#228B22"/>
+
+  <!-- Garlic -->
+  <ellipse cx="650" cy="200" rx="15" ry="25" fill="#F5DEB3" stroke="#D2B48C" stroke-width="1"/>
+  <path d="M645 190 Q650 185 655 190" stroke="#8B4513" stroke-width="1" fill="none"/>
+
+  <!-- Bread -->
+  <ellipse cx="100" cy="300" rx="40" ry="15" fill="#DEB887" stroke="#8B4513" stroke-width="1"/>
+  <path d="M60 300 Q100 285 140 300" stroke="#8B4513" stroke-width="1" fill="none"/>
+
+  <!-- Wine glass -->
+  <path d="M720 250 L730 350 L710 350 Z" fill="#87CEEB" stroke="#4682B4" stroke-width="1">
+    <animate attributeName="fill" values="#87CEEB;#ADD8E6;#87CEEB" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <line x1="720" y1="250" x2="720" y2="320" stroke="#4682B4" stroke-width="2"/>
+  <ellipse cx="720" cy="240" rx="8" ry="5" fill="#FF6347">
+    <animate attributeName="fill" values="#FF6347;#FFA07A;#FF6347" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Floating elements with animation -->
+  <circle cx="200" cy="80" r="4" fill="#FFD700" opacity="0.8">
+    <animate attributeName="cy" values="80;70;80" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="120" r="3" fill="#FFA500" opacity="0.6">
+    <animate attributeName="cy" values="120;110;120" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="60" r="5" fill="#FF6347" opacity="0.7">
+    <animate attributeName="cy" values="60;50;60" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="500" cy="100" r="3" fill="#FFD700" opacity="0.9">
+    <animate attributeName="cy" values="100;90;100" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="80" r="4" fill="#FFA500" opacity="0.5">
+    <animate attributeName="cy" values="80;70;80" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Main text -->
+  <text x="400" y="180" text-anchor="middle" font-family="Georgia, serif" font-size="48" font-weight="bold" fill="#FFFFFF" stroke="#8B4513" stroke-width="1">
+    Gastronomia Mediterrània
+  </text>
+  <text x="400" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#FFFFFF" opacity="0.9">
+    Ingredients Frescos i Tradicionals
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#FFFACD">
+    Descobreix els sabors autèntics del Mediterrani
+  </text>
+</svg>

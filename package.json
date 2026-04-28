@@ -1,17 +1,19 @@
 {
-  "name": "pac1",
-  "version": "0.26.4",
-  "description": "PAC1 M4.257 - Website for the PAC1.",
+  "name": "pac2",
+  "version": "0.26.5",
+  "description": "PAC2 M4.257 - Website for the PAC2.",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html  --dist-dir dist"
+    "build": "parcel build src/index.html --dist-dir dist",
+    "optimize-images": "node scripts/optimize-images.js"
   },
-  "author": "Alexandre Camps",  
+  "author": "Alexandre Camps",
   "license": "GNU General Public License v3.0",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.16.4",
     "parcel": "^2.16.4",
-    "sass": "^1.98.0"
+    "sass": "^1.98.0",
+    "sharp": "^0.33.0"
   },
   "dependencies": {
     "swiper": "^12.1.3"
