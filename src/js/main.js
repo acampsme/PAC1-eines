@@ -26,7 +26,7 @@ const swiper = new Swiper('.swiper', {
 });
 
 const burger = document.querySelector(".burger");
-const nav = document.querySelector(".nav");
+const nav = document.querySelector(".nav-menu");
 
 if (burger && nav) {
   burger.addEventListener("click", () => {

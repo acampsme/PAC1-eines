@@ -8,67 +8,124 @@
 </head>
 
 <body>
+<a href="#main" class="skip-link">Saltar al contingut</a>
 
-<header class="header">
-  <h1>Tasteig del Mediterrani</h1>
-  <button class="burger" aria-expanded="false" aria-label="Obrir menú">☰</button>
+<header class="header" role="banner">
+  <div class="header-inner">
+    <div>
+      <p class="eyebrow">Receptes saboroses</p>
+      <h1>Tasteig del Mediterrani</h1>
+    </div>
 
-  <nav aria-label="Navegació principal">
-    <ul class="nav">
-      <li><a href="index.html">Inici</a></li>
-      <li><a href="categoria.html">Receptes</a></li>
-      <li><a href="links.html"">Enllaços</a></li>
-    </ul>
-  </nav>
+    <button class="burger" aria-expanded="false" aria-label="Obrir menú">☰</button>
+
+    <nav class="nav-menu" aria-label="Navegació principal">
+      <ul class="nav">
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="categoria.html">Receptes</a></li>
+        <li><a href="links.html">Enllaços</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
- <div class="swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="https://placehold.co/600" alt="Salmó al forn"></div>
-    <div class="swiper-slide"><img src="https://placehold.co/600" alt="Paella valenciana"></div>
-    <div class="swiper-slide"><img src="https://placehold.co/600" alt="Pasta"></div>
-  </div>
+<main id="main" class="container">
+  <section class="section-intro">
+    <h2>Receptes mediterrànies per a totes les pantalles</h2>
+    <p>Gaudeix d’un menú adaptat a dispositivos mòbils, tauletes i escriptoris amb animacions lleugeres i imatges responsives.</p>
+  </section>
 
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-</div>
+  <section class="slider-section" aria-label="Galeria de receptes destacades">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/photo-fish-400.jpg"
+               srcset="images/photo-fish-400.jpg 400w, images/photo-fish-800.jpg 800w, images/photo-fish-1200.jpg 1200w"
+               sizes="(max-width: 640px) 100vw, 600px"
+               alt="Salmó al forn"
+               loading="lazy">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/photo-paella-400.jpg"
+               srcset="images/photo-paella-400.jpg 400w, images/photo-paella-800.jpg 800w, images/photo-paella-1200.jpg 1200w"
+               sizes="(max-width: 640px) 100vw, 600px"
+               alt="Paella valenciana"
+               loading="lazy">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/photo-pasta-400.jpg"
+               srcset="images/photo-pasta-400.jpg 400w, images/photo-pasta-800.jpg 800w, images/photo-pasta-1200.jpg 1200w"
+               sizes="(max-width: 640px) 100vw, 600px"
+               alt="Pasta"
+               loading="lazy">
+        </div>
+      </div>
 
-<main class="grid">
-  <article class="card">
-    <img src="https://placehold.co/400" alt="Paella">
-    <h2>Paella Valenciana</h2>
-    <p>Recepta tradicional amb carns i verdures locals, símbol de la cuina del Mediterrani.</p>
-    <a href="detall1.html">Veure més</a>
-  </article>
+      <div class="swiper-pagination" aria-label="Paginació del carrousel"></div>
+      <button class="swiper-button-prev" aria-label="Anterior"></button>
+      <button class="swiper-button-next" aria-label="Següent"></button>
+    </div>
+  </section>
 
-  <article class="card">
-    <img src="https://placehold.co/400" alt="Pasta">
-    <h2>Pasta Carbonara</h2>
-    <p>Clàssic romà combinant ou, formatge i guanciale en una salsa sedosa.</p>
-    <a href="detall2.html">Veure més</a>
-  </article>
+  <section class="grid" aria-labelledby="recipe-grid-title">
+    <h2 id="recipe-grid-title" class="sr-only">Llista de receptes</h2>
 
-  <article class="card">
-    <img src="https://placehold.co/400" alt="Amanida grega">
-    <h2>Amanida Grega</h2>
-    <a href="categoria.html">Veure més</a>
-  </article>
+    <article class="card">
+      <img src="images/photo-paella-400.jpg"
+           srcset="images/photo-paella-400.jpg 400w, images/photo-paella-800.jpg 800w, images/photo-paella-1200.jpg 1200w"
+           sizes="(max-width: 640px) 100vw, 400px"
+           alt="Paella valenciana"
+           loading="lazy">
+      <h2>Paella Valenciana</h2>
+      <p>Recepta tradicional amb carns i verdures locals, símbol de la cuina del Mediterrani.</p>
+      <a class="card-link" href="det1.html">Veure més</a>
+    </article>
 
-  <article class="card">
-    <img src="https://placehold.co/400" alt="Hummus artesanal">
-    <h2>Hummus</h2>
-    <a href="categoria.html">Veure més</a>
-  </article>
+    <article class="card">
+      <img src="images/photo-pasta-400.jpg"
+           srcset="images/photo-pasta-400.jpg 400w, images/photo-pasta-800.jpg 800w, images/photo-pasta-1200.jpg 1200w"
+           sizes="(max-width: 640px) 100vw, 400px"
+           alt="Pasta"
+           loading="lazy">
+      <h2>Pasta Carbonara</h2>
+      <p>Clàssic romà combinant ou, formatge i guanciale en una salsa sedosa.</p>
+      <a class="card-link" href="det2.html">Veure més</a>
+    </article>
 
-  <article class="card">
-    <img src="https://placehold.co/400" alt="Salmó al forn">
-    <h2>Salmó al forn</h2>
-    <a href="categoria.html">Veure més</a>
-  </article>
+    <article class="card">
+      <img src="images/photo-amanida-400.jpg"
+           srcset="images/photo-amanida-400.jpg 400w, images/photo-amanida-800.jpg 800w, images/photo-amanida-1200.jpg 1200w"
+           sizes="(max-width: 640px) 100vw, 400px"
+           alt="Amanida grega"
+           loading="lazy">
+      <h2>Amanida Grega</h2>
+      <p>Fresca i saludable amb formatge feta.</p>
+      <a class="card-link" href="categoria.html">Veure més</a>
+    </article>
 
+    <article class="card">
+      <img src="images/photo-hamburguer-400.jpg"
+           srcset="images/photo-hamburguer-400.jpg 400w, images/photo-hamburguer-800.jpg 800w, images/photo-hamburguer-1200.jpg 1200w"
+           sizes="(max-width: 640px) 100vw, 400px"
+           alt="Hamburguer casolà"
+           loading="lazy">
+      <h2>Hamburguer casolà</h2>
+      <a class="card-link" href="categoria.html">Veure més</a>
+    </article>
+
+    <article class="card">
+      <img src="images/photo-fish-400.jpg"
+           srcset="images/photo-fish-400.jpg 400w, images/photo-fish-800.jpg 800w, images/photo-fish-1200.jpg 1200w"
+           sizes="(max-width: 640px) 100vw, 400px"
+           alt="Salmó al forn"
+           loading="lazy">
+      <h2>Salmó al forn</h2>
+      <a class="card-link" href="categoria.html">Veure més</a>
+    </article>
+  </section>
 </main>
-<footer>
+
+<footer class="site-footer">
   <p>&copy; 2026 Tasteig del Mediterrani</p>
   <p>Contacte: <a href="mailto:acampsme@uoc.edu">Alexandre Camps</a></p>
 </footer>

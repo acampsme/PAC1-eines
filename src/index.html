@@ -5,79 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tasteig del Mediterrani</title>
   <link rel="stylesheet" href="./css/styles.scss">
-
 </head>
 
 <body>
-
 <a href="#main" class="skip-link">Saltar al contingut</a>
 
-<header class="header">
-  <h1>Tasteig del Mediterrani</h1>
-  <button class="burger" aria-expanded="false" aria-label="Obrir menú">☰</button>
+<header class="header" role="banner">
+  <div class="header-inner">
+    <div>
+      <p class="eyebrow">Menjar mediterrani modern</p>
+      <h1>Tasteig del Mediterrani</h1>
+    </div>
 
-  <nav aria-label="Navegació principal">
-    <ul class="nav">
-      <li><a href="index.html">Inici</a></li>
-      <li><a href="categoria.html">Receptes</a></li>
-      <li><a href="links.html"">Enllaços</a></li>
-    </ul>
-  </nav>
+    <button class="burger" aria-expanded="false" aria-label="Obrir menú">☰</button>
+
+    <nav class="nav-menu" aria-label="Navegació principal">
+      <ul class="nav">
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="categoria.html">Receptes</a></li>
+        <li><a href="links.html">Enllaços</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main id="main" class="container">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <span class="eyebrow">Accessible · Responsive · Optimitzat</span>
+      <h2 id="hero-title">Descobreix la gastronomia mediterrània</h2>
+      <p>Explora receptes tradicionals i tècniques modernes amb ingredients frescos per a totes les pantalles.</p>
+      <div class="hero-actions">
+        <button class="button primary" id="btnInfo">Mostrar missatge</button>
+        <a class="button secondary" href="categoria.html">Veure receptes</a>
+      </div>
+      <p class="hero-note" id="missatge" aria-live="polite"></p>
+    </div>
 
-  <section class="hero">
-    <h2>Descobreix la gastronomia mediterrània</h2>
-    <p>Explora receptes tradicionals amb ingredients frescos.</p>
-    <button id="btnInfo">Mostrar missatge</button>
-    <p id="missatge" aria-live="polite"></p>
+    <picture class="hero-visual" aria-hidden="true">
+      <source type="image/svg+xml" srcset="images/hero-banner.svg">
+      <img src="images/hero-banner.svg" alt="Il·lustració de gastronomia mediterrània amb ingredients frescos" />
+    </picture>
   </section>
 
-  <section class="cards">
-    <article>
-      <img src="https://placehold.co/400" alt="Plat de paella valenciana">
+  <section class="cards" aria-labelledby="cards-title">
+    <h2 id="cards-title" class="sr-only">Receptes destacades</h2>
+
+    <article class="card">
+      <img src="images/photo-paella-400.jpg"
+           srcset="images/photo-paella-400.jpg 400w, images/photo-paella-800.jpg 800w, images/photo-paella-1200.jpg 1200w"
+           sizes="(max-width: 640px) 100vw, 400px"
+           alt="Paella valenciana"
+           loading="lazy">
       <h3>Paella</h3>
       <p>Fons d’arròs amb safrà, verdures i carns/marisc, ideal per compartir en família.</p>
-      <a href="detall1.html">Veure detall</a>
+      <a class="card-link" href="det1.html">Veure detall</a>
     </article>
 
-    <article>
-      <img src="https://placehold.co/400" alt="Plat de pasta italiana">
+    <article class="card">
+      <img src="images/photo-pasta-400.jpg"
+           srcset="images/photo-pasta-400.jpg 400w, images/photo-pasta-800.jpg 800w, images/photo-pasta-1200.jpg 1200w"
+           sizes="(max-width: 640px) 100vw, 400px"
+           alt="Plat de pasta italiana"
+           loading="lazy">
       <h3>Pasta</h3>
       <p>Pasta al dente amb salsa cremoses tradicionals com carbonara i arrabbiata.</p>
-      <a href="detall2.html">Veure detall</a>
+      <a class="card-link" href="det2.html">Veure detall</a>
     </article>
 
-    <article>
-      <img src="https://placehold.co/400" alt="Amanida grega">
+    <article class="card">
+      <img src="images/photo-amanida-400.jpg"
+           srcset="images/photo-amanida-400.jpg 400w, images/photo-amanida-800.jpg 800w, images/photo-amanida-1200.jpg 1200w"
+           sizes="(max-width: 640px) 100vw, 400px"
+           alt="Amanida grega"
+           loading="lazy">
       <h3>Amanida grega</h3>
       <p>Fresca i saludable amb formatge feta.</p>
-      <a href="categoria.html">Veure recepta</a>
+      <a class="card-link" href="categoria.html">Veure recepta</a>
     </article>
 
-    <article>
-      <img src="https://placehold.co/400" alt="Hummus casolà">
-      <h3>Hummus</h3>
+    <article class="card">
+      <img src="images/photo-hamburguer-400.jpg"
+           srcset="images/photo-hamburguer-400.jpg 400w, images/photo-hamburguer-800.jpg 800w, images/photo-hamburguer-1200.jpg 1200w"
+           sizes="(max-width: 640px) 100vw, 400px"
+           alt="Hamburguer casolà"
+           loading="lazy">
+      <h3>Burger home</h3>
       <p>Submergeix pa pita apte per compartir.</p>
-      <a href="categoria.html">Veure recepta</a>
+      <a class="card-link" href="categoria.html">Veure recepta</a>
     </article>
 
-    <article>
-      <img src="https://placehold.co/400" alt="Salmó al forn">
+    <article class="card">
+      <img src="images/photo-fish-400.jpg"
+           srcset="images/photo-fish-400.jpg 400w, images/photo-fish-800.jpg 800w, images/photo-fish-1200.jpg 1200w"
+           sizes="(max-width: 640px) 100vw, 400px"
+           alt="Salmó al forn"
+           loading="lazy">
       <h3>Salmó al forn</h3>
       <p>Plat ric en Omega-3 amb herbes mediterrànies.</p>
-      <a href="categoria.html">Veure recepta</a>
+      <a class="card-link" href="categoria.html">Veure recepta</a>
     </article>
   </section>
-
-
 </main>
 
-<footer>
+<footer class="site-footer">
   <p>&copy; 2026 Tasteig del Mediterrani</p>
   <p>Contacte: <a href="mailto:acampsme@uoc.edu">Alexandre Camps</a></p>
-  
 </footer>
 
 <script type="module" src="./js/main.js"></script>
