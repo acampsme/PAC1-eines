@@ -57,7 +57,7 @@ El script `npm run optimize-images` genera variants `-400`, `-800` i `-1200` en 
 - alt descriptius en totes les imatges i `aria-label` en controls.
 
 ### This project is in 
-´https://github.com/acampsme/PAC1-eines.git´
+https://github.com/acampsme/PAC1-eines.git
 
 ### Running on netlify
-´https://pac1-eines.netlify.app/´
+https://pac1-eines.netlify.app/
